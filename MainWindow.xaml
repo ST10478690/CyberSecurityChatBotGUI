@@ -1,0 +1,71 @@
+﻿<Window x:Class="CyberSecurityChatBotGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cybersecurity Awareness Chatbot"
+        Height="500" Width="420"
+        Background="Black">
+
+    <Grid>
+
+        <!-- TITLE (PINK) -->
+        <TextBlock Text="Cybersecurity Awareness Chatbot 💖"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Foreground="#ff4fd1"
+                   HorizontalAlignment="Center"
+                   Margin="0,10,0,0"/>
+
+        <!-- CHAT AREA (NOW BLACK INSIDE) -->
+        <TextBox Name="ChatDisplay"
+                 Margin="10,50,10,90"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 FontSize="13"
+                 Background="Black"
+                 Foreground="#ff4fd1"
+                 BorderBrush="#ff4fd1"
+                 BorderThickness="2"/>
+
+        <!-- INPUT BOX (WHITE) -->
+        <TextBox Name="UserInput"
+                 Height="35"
+                 Margin="10,0,100,30"
+                 VerticalAlignment="Bottom"
+                 FontSize="13"
+                 Background="White"
+                 Foreground="Black"
+                 BorderBrush="#ff4fd1"
+                 BorderThickness="2"/>
+
+        <!-- PINK SEND BUTTON -->
+        <Button Content="Send"
+                Width="80"
+                Height="35"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,10,30"
+                Background="#ff4fd1"
+                Foreground="White"
+                FontWeight="Bold"
+                BorderThickness="0"
+                Click="SendButton_Click">
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Background" Value="#ff4fd1"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#ff1493"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+
+        </Button>
+
+    </Grid>
+</Window>
